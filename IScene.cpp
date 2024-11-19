@@ -8,4 +8,4 @@ int IScene::sceneNO = TITLE;
 IScene::~IScene(){}
 
 // シーン番号のゲッター
-int IScene::GetSceneNO() { return scene; };
+int IScene::GetSceneNO() { return sceneNO; };
