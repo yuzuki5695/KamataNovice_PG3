@@ -11,9 +11,9 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 	GameManager gameManager;
 
-	gameManager.Run();
+	int result  = gameManager.Run();
 
 	// ライブラリの終了
 	Novice::Finalize();
-	return 0;
+	return result;
 }

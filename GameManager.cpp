@@ -44,4 +44,5 @@ int GameManager::Run() {
 			break;
 		}
 	}
+	return 0;
 }
