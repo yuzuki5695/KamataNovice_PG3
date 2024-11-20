@@ -1,4 +1,3 @@
-#include <Novice.h>
 #include"GameManager.h"
 
 const char kWindowTitle[] = "学籍番号";
