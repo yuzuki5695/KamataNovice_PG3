@@ -1,6 +1,6 @@
 #include "InputHandler.h"
 #include<Novice.h>
-
+ 
 void InputHandler::AssignMoveLeftCommand2PressKeyA() {
 	ICommand* command = new MoveLeftCommand();
 	this->pressKeyA_ = command;
