@@ -1,9 +1,10 @@
 #pragma once
 #include<memory>
-#include"IScene.h"
-#include"TitleScene.h"
-#include "StageScene.h"
-#include "ClearScene.h"
+//#include"IScene.h"
+//#include"TitleScene.h"
+//#include "StageScene.h"
+//#include "ClearScene.h"
+#include"InputManager.h"
 
 class GameManager
 {
