@@ -1,11 +1,11 @@
 #include"IScene.h"
 
-// ƒ^ƒCƒgƒ‹ƒV[ƒ“‚Å‰Šú‰»
+// ã‚¿ã‚¤ãƒˆãƒ«ã‚·ãƒ¼ãƒ³ã§åˆæœŸåŒ–
 int IScene::sceneNO = TITLE;
 
-// ‰¼‘zƒfƒXƒgƒ‰ƒNƒ^‚Ì’è‹`
-// ƒˆ‰¼‘zŠÖ”‚µ‚Ä‚¢‚È‚¢‚Ì‚ÅA‚±‚±‚Å’è‹`‚·‚é
+// ä»®æƒ³ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã®å®šç¾©
+// ç´”ç²‹ä»®æƒ³é–¢æ•°ã—ã¦ã„ãªã„ã®ã§ã€ã“ã“ã§å®šç¾©ã™ã‚‹
 IScene::~IScene(){}
 
-// ƒV[ƒ“”Ô†‚ÌƒQƒbƒ^[
+// ã‚·ãƒ¼ãƒ³ç•ªå·ã®ã‚²ãƒƒã‚¿ãƒ¼
 int IScene::GetSceneNO() { return sceneNO; };

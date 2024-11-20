@@ -1,6 +1,5 @@
 #pragma once
 #include <Novice.h>
-#include <cstring> // memcpy用
 
 class InputManager {
 private:
@@ -10,7 +9,7 @@ private:
 public:
     // キー入力状態の更新
     void Update() {
-        std::memcpy(preKeys_, keys_, sizeof(keys_));
+        memcpy(preKeys_, keys_, 256);
         Novice::GetHitKeyStateAll(keys_);
     }
 
