@@ -1,46 +1,47 @@
 #include "GameManager.h"
 
 GameManager::GameManager() {
-	//// 各シーンの配列
-	//sceneArr_[TITLE] = std::make_unique<TitleScene>();
-	//sceneArr_[STAGE] = std::make_unique<StageScene>();
-	//sceneArr_[TITLE] = std::make_unique<TitleScene>();
+	// 各シーンの配列
+	sceneArr_[TITLE] = std::make_unique<TitleScene>();
+	sceneArr_[STAGE] = std::make_unique<StageScene>();
+	sceneArr_[CLEAR] = std::make_unique<ClearScene>();
 
-
-
-	//// 初期シーンの設定
-	//currentSceneNO_ = TITLE;
+	// 初期シーンの設定
+	currentSceneNO_ = TITLE;
 }
 
 GameManager::~GameManager(){}
 
 int GameManager::Run() {
+
+	int Scenenoba = sceneArr_[currentSceneNO_]->GetSceneNO();
+
 	while (Novice::ProcessMessage() == 0 ){
 		Novice::BeginFrame(); // フレームの開始
 
-		inputManager_->Update();
+		inputManager_.Update();
 
-		//// シーンチェック
-		//prevSceneNo_ = currentSceneNO_;
-		//currentSceneNO_ = sceneArr_[currentSceneNO_]->GetSceneNO();
+		// シーンチェック
+		prevSceneNo_ = currentSceneNO_;
+		currentSceneNO_ = sceneArr_[currentSceneNO_]->GetSceneNO();
 
-		//// シーン変更チェック
-		//if (prevSceneNo_ != currentSceneNO_) {
-		//	sceneArr_[currentSceneNO_]->Init();
-		//}
+		// シーン変更チェック
+		if (prevSceneNo_ != currentSceneNO_) {
+			sceneArr_[currentSceneNO_]->Init();
+		}
 
-		////// 更新処理
-		//sceneArr_[currentSceneNO_]->Update(inputManager_->Getkeys(), inputManager_->GetPrekeys()); // シーンごとの更新処理
+		//// 更新処理
+		sceneArr_[currentSceneNO_]->Update(inputManager_.Getkeys(), inputManager_.GetPrekeys()); // シーンごとの更新処理
 
-		////// 描画処理
-		//sceneArr_[currentSceneNO_]->Draw();
+		//// 描画処理
+		sceneArr_[currentSceneNO_]->Draw();
 
-		//Novice::ScreenPrintf(0,0,"PrevSceneNo",&prevSceneNo_);
+		Novice::ScreenPrintf(0,0,"PrevScene  : %d",Scenenoba);
 
 		Novice::EndFrame(); //  フレームの終わり
 
 		// ESCキーが押されたらループを抜ける
-		if (inputManager_->GetPrekeys()[DIK_ESCAPE] == 0 && inputManager_->Getkeys()[DIK_ESCAPE] != 0) {
+		if (inputManager_.GetPrekeys()[DIK_ESCAPE] == 0 && inputManager_.Getkeys()[DIK_ESCAPE] != 0) {
 			break;
 		}
 	}

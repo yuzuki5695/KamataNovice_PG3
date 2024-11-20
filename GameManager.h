@@ -1,22 +1,21 @@
 #pragma once
 #include<memory>
-//#include"IScene.h"
-//#include"TitleScene.h"
-//#include "StageScene.h"
-//#include "ClearScene.h"
-#include"InputManager.h"
+#include"IScene.h"
+#include"TitleScene.h"
+#include "StageScene.h"
+#include "ClearScene.h"
 
 class GameManager
 {
 private:
-	//// シーンを保持するメンバ変数
-	//std::unique_ptr<IScene> sceneArr_[3];
+	// シーンを保持するメンバ変数
+	std::unique_ptr<IScene> sceneArr_[3];
 
-	//// どのステージを呼び出すかを管理する変数
-	//int currentSceneNO_; // 現在のシーン
-	//int prevSceneNo_; // 前のシーン
+	// どのステージを呼び出すかを管理する変数
+	int currentSceneNO_; // 現在のシーン
+	int prevSceneNo_; // 前のシーン
 
-	InputManager* inputManager_;
+	InputManager inputManager_;
 
 public:
 	GameManager(); // コンストラクタ
