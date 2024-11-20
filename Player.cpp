@@ -1,4 +1,5 @@
 #include "Player.h"
+#include<Novice.h>
 
 Player::Player() {}
 
@@ -9,7 +10,10 @@ void Player::Init(){
 
 void Player::Update() {}
 
-void Player::Draw() {}
+void Player::Draw() {
+
+	//Novice::ScreenPrintf(100,0, "pos x : %f", Pos_.x);
+}
 
 void Player::MoveRight() {
 	this->Pos_.x += this->speed_.x;
