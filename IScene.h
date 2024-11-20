@@ -1,4 +1,5 @@
 #pragma once
+#include"InputManager.h"
 
 // シーン名を列挙型(Enum)で定義
 enum SCENE { TITLE, STAGE, CLEAR };
@@ -13,7 +14,7 @@ public:
 	// 継承先で実装される関数
 	// 抽象クラスなので純粋仮想関数とする
 	virtual void Init() = 0;
-	virtual void Update() = 0;
+	virtual void Update(const char* keys, const char* preKeys) = 0;
 	virtual void Draw() = 0;
 
 	// 仮想デストラクタを用意しないと警告される

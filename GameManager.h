@@ -2,6 +2,8 @@
 #include<memory>
 #include"IScene.h"
 #include"TitleScene.h"
+#include "StageScene.h"
+#include "ClearScene.h"
 
 class GameManager
 {
@@ -13,10 +15,12 @@ private:
 	int currentSceneNO_; // 現在のシーン
 	int prevSceneNo_; // 前のシーン
 
+	InputManager* inputManager_;
+
 public:
 	GameManager(); // コンストラクタ
 	~GameManager(); // デストラクタ 
-	int Run(); // この関数でゲームループを呼び出す
 
+	int Run(); // この関数でゲームループを呼び出す
 };
 
