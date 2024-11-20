@@ -14,7 +14,7 @@ GameManager::~GameManager(){}
 
 int GameManager::Run() {
 
-	int Scenenoba = 0;
+	int number = 0;
 
 	while (Novice::ProcessMessage() == 0 ){
 		Novice::BeginFrame(); // フレームの開始
@@ -22,11 +22,11 @@ int GameManager::Run() {
 		inputManager_.Update();
 
 		if (sceneArr_[currentSceneNO_]->GetSceneNO() == 0 ) {
-			Scenenoba = 1;
+			number = 0;
 		}else if (sceneArr_[currentSceneNO_]->GetSceneNO() == 1) {
-			Scenenoba = 2;
+			number = 1;
 		} else if (sceneArr_[currentSceneNO_]->GetSceneNO() == 2) {
-			Scenenoba = 3;
+			number = 2;
 		}
 
 		// シーンチェック
@@ -44,15 +44,16 @@ int GameManager::Run() {
 		//// 描画処理
 		sceneArr_[currentSceneNO_]->Draw();
 
-		Novice::ScreenPrintf(0,0,"SceneNO : %d",Scenenoba);
-		if (Scenenoba == 1) {
+		// シーン番号
+		Novice::ScreenPrintf(0,0,"SceneNO : %d",number);
+
+		if (number == 0) {
 			Novice::ScreenPrintf(640, 320, "TITLE");
-		}else if (Scenenoba == 2) {
+		}else if (number == 1) {
 			Novice::ScreenPrintf(640, 320, "STAGE");
-		}else if (Scenenoba == 3) {
+		}else if (number == 2) {
 			Novice::ScreenPrintf(640, 320, "CLEAR");
 		}
-
 
 		Novice::EndFrame(); //  フレームの終わり
 
