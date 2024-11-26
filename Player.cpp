@@ -20,4 +20,4 @@ void Player::MoveRight() {
 
 void Player::MoveLeft() {
 	this->Pos_.x -= this->speed_.x;
-}
+} 

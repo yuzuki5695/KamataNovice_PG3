@@ -54,7 +54,7 @@ int GameManager::Run() {
 		}else if (number == 2) {
 			Novice::ScreenPrintf(640, 320, "CLEAR");
 		}
-		
+		 
 		Novice::EndFrame(); //  フレームの終わり
 
 		// ESCキーが押されたらループを抜ける

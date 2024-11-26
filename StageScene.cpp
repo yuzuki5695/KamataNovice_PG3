@@ -25,7 +25,7 @@ void StageScene::Update(const char* keys, const char* preKeys) {
 	// set command
 	if (this->iCommand_) {
 		iCommand_->Exec(*player_);
-	}
+	} 
 
 	player_->Update();
 }

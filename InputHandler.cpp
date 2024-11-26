@@ -10,7 +10,7 @@ void InputHandler::AssignMoveRightCommand2PressKeyD() {
 	ICommand* command = new MoveRightCommand();
 	this->pressKeyD_ = command;
 }
-
+ 
 ICommand* InputHandler::HandleInput() {
 	if (Novice::CheckHitKey(DIK_D)) {
 		return pressKeyD_;

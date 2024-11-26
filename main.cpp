@@ -1,5 +1,5 @@
 #include"GameManager.h"
-
+ 
 const char kWindowTitle[] = "学籍番号";
 
 // Windowsアプリでのエントリーポイント(main関数)
