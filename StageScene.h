@@ -11,6 +11,7 @@ private:
 	Player* player_;
 
 public:
+	StageScene();
 	void Init() override;
 	void Update(const char* keys, const char* preKeys) override;
 	void Draw() override;

@@ -1,5 +1,7 @@
 #include "Command.h"
 
+ICommand::~ICommand() {};
+
 void MoveRightCommand::Exec(Player& player) {
 	player.MoveRight();
 }

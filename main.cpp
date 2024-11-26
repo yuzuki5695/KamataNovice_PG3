@@ -9,7 +9,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	Novice::Initialize(kWindowTitle, 1280, 720);
 
 	GameManager gameManager;
-
+	
 	int result  = gameManager.Run();
 
 	// ライブラリの終了

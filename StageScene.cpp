@@ -1,5 +1,7 @@
 #include "StageScene.h"
 
+StageScene::StageScene() {};
+
 void StageScene::Init() {
 	inputHandler_ = new InputHandler();
 
@@ -9,6 +11,7 @@ void StageScene::Init() {
 
 	// New Player
 	player_ = new Player();
+	player_->Init();
 }
 
 void StageScene::Update(const char* keys, const char* preKeys) {
@@ -27,4 +30,6 @@ void StageScene::Update(const char* keys, const char* preKeys) {
 	player_->Update();
 }
 
-void StageScene::Draw() {}
+void StageScene::Draw() {
+	player_->Draw();
+}

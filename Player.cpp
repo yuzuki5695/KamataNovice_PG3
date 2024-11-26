@@ -4,15 +4,14 @@
 Player::Player() {}
 
 void Player::Init(){
-	Pos_ = { 640.0f,320.0f };
+	Pos_ = { 640.0f,120.0f };
 	speed_ = { 5.0f,5.0f };
 }
 
 void Player::Update() {}
 
 void Player::Draw() {
-
-	//Novice::ScreenPrintf(100,0, "pos x : %f", Pos_.x);
+	Novice::DrawBox(int(Pos_.x),int(Pos_.y), 40, 40, 0.0f, WHITE, kFillModeSolid);
 }
 
 void Player::MoveRight() {
